@@ -5,15 +5,18 @@ import java.util.Set;
 public class containDuplicates {
 
     public static void main(String[] args) {
-        int[] nums = {1, 2, 5, 4, 7, 8, 9, 6, 5, 4, 2, 6, 8};
-        Set<Integer> set = new HashSet<>();
+        int[] nums = {0, 1};
+        System.out.println(containDuplicates(nums));
+    }
 
+    public static boolean containDuplicates(int[] nums) {
+        Set<Integer> set = new HashSet<>();
         for (int num : nums) {
             if (set.contains(num)) {
-                System.out.println("true");
+                return true;
             }
             set.add(num);
         }
-        System.out.println("false");
+        return false;
     }
 }
